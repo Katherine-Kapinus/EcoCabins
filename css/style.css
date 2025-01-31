@@ -98,7 +98,7 @@ body a {
   z-index: 4;
 }
 [class*=__container] {
-  max-width: 52.5rem;
+  max-width: 60rem;
   margin: 0 auto;
   padding-inline: 0.9375rem;
 }
@@ -182,7 +182,7 @@ body a {
 }
 .header__item {
   color: #fff;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 @media (max-width: 620px) {
   .header__item {
@@ -201,7 +201,7 @@ body a {
   max-height: 34px;
 }
 .header__button:hover {
-  background-color: #494949;
+  background-color: #757474;
   color: #fff;
 }
 @media (max-width: 620px) {
@@ -232,8 +232,8 @@ body a {
   }
 }
 .hero__titles {
-  flex: 0 0 56%;
-  z-index: 4;
+  flex: 0 0 50%;
+  z-index: 6;
   color: #fff;
 }
 .hero__sub-title {
@@ -242,8 +242,8 @@ body a {
   padding-bottom: 12px;
 }
 .hero__video {
-  z-index: 4;
-  flex: 0 0 45%;
+  z-index: 7;
+  flex: 0 0 50%;
   display: flex;
 }
 @media (min-width: 620px) {
@@ -282,6 +282,17 @@ body a {
   top: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 1;
+  opacity: 15%;
 }
 
 .materials__container {
@@ -322,4 +333,39 @@ body a {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.swiper__slide::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 10;
+  opacity: 15%;
+}
+.swiper__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  gap: 0.5rem;
+  padding: 0 5px 7px 5px;
+}
+.swiper__pagination .swiper-pagination-bullet {
+  flex: 0 0 0.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+  opacity: 0.4;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.swiper__pagination .swiper-pagination-bullet-active {
+  background-color: #fff;
+  opacity: 1;
 }
