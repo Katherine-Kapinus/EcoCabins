@@ -348,9 +348,10 @@ body a {
   top: -40px;
   left: 0;
   height: 140px;
-  background-color: #ffffff;
   width: 70%;
   z-index: 1;
+  background-color: rgba(255, 255, 255, var(--scroll-opacity-before)); /* Від прозорого до сірого */
+  transition: background-color 0.001s linear;
 }
 
 .swiper {
@@ -361,6 +362,8 @@ body a {
   height: 100%;
   left: 0;
   bottom: 75px;
+  opacity: var(--scroll-opacity-swiper);
+  transition: background-color 0.001s linear;
 }
 .swiper__slide {
   aspect-ratio: 300/420;
@@ -503,7 +506,7 @@ body a {
 }
 .footer__legal {
   display: flex;
-  gap: 10%;
+  gap: 15%;
 }
 .footer__cookies:hover {
   cursor: pointer;

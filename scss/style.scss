@@ -156,7 +156,7 @@ body{
       transition: background-color 0.1s linear;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 
-      
+
 
 }
 // .scroll{
@@ -323,9 +323,10 @@ body{
             top: -40px;
             left: 0;
             height: 140px;
-            background-color: #ffffff;
             width: 70%;
             z-index: 1;
+            background-color: rgba(255, 255, 255, var(--scroll-opacity-before)); /* Від прозорого до сірого */
+            transition: background-color 0.001s linear;
       }
 }
 
@@ -338,6 +339,11 @@ body{
       height: 100%;
       left: 0;
       bottom: 75px;
+      opacity: var(--scroll-opacity-swiper);
+      transition: background-color 0.001s linear;
+
+
+
 
 
       
@@ -517,7 +523,7 @@ body{
 
       &__legal {
             display: flex;
-            gap: 10%;
+            gap: 15%;
       }
 
       &__cookies {
