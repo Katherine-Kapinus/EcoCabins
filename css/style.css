@@ -477,3 +477,32 @@ body a {
   line-height: 22px;
   margin-bottom: 0;
 }
+
+.footer {
+  background-color: #222f33;
+}
+.footer__container {
+  max-width: 76.25rem;
+  display: flex;
+  padding-block: 40px;
+  justify-content: space-between;
+}
+.footer__mail:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer__logo:hover {
+  cursor: pointer;
+}
+.footer__legal {
+  display: flex;
+  gap: 10%;
+}
+.footer__cookies:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer__privacy-policy:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

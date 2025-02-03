@@ -475,6 +475,53 @@ body{
       }
 }
 
+//- Footer
+
+.footer {
+      background-color: $second-color;
+      
+
+      &__container {
+            max-width: rem(1220);
+            display: flex;
+            padding-block: 40px;
+            justify-content: space-between;
+      }
+
+      &__mail {
+            &:hover{
+                  cursor: pointer;
+                  text-decoration: underline;
+            }
+      }
+
+      &__logo {
+            &:hover{
+                  cursor: pointer;
+            }
+      }
+
+      &__legal {
+            display: flex;
+            gap: 10%;
+      }
+
+      &__cookies {
+            &:hover{
+                  cursor: pointer;
+                  text-decoration: underline;
+            }
+      }
+
+      &__privacy-policy {
+            &:hover{
+                  cursor: pointer;
+                  text-decoration: underline;
+            }
+      }
+}
+
+
 
 
 

@@ -8,3 +8,7 @@ const swiper = new Swiper('.materials__slider', {
     },
 
 });
+
+window.addEventListener('scroll', function () {
+    document.querySelector('.header').classList.toggle('scroll', scrollY > 0);
+});
