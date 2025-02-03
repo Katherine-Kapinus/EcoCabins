@@ -221,6 +221,11 @@ body a {
   }
 }
 
+.scroll {
+  background-color: #b5bcbf;
+  opacity: 0.98;
+}
+
 .hero__container {
   min-height: 100vh;
   width: 100%;
