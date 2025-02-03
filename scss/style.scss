@@ -152,8 +152,11 @@ body{
 }
 
 .scroll{
-      background-color: #b5bcbf;
-      opacity: 0.98;
+      background-color: rgba(128, 128, 128, var(--scroll-opacity)); /* Від прозорого до сірого */
+      transition: background-color 0.1s linear;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+      
 
 }
 // .scroll{
