@@ -152,22 +152,26 @@ body{
 }
 
 .scroll{
-      background-color: rgba(128, 128, 128, var(--scroll-opacity)); /* Від прозорого до сірого */
+      background-color: rgba(128, 128, 128, var(--scroll-opacity-grey-before)); /* Від прозорого до сірого */
+      transition: background-color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+      
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.blue{
+      background-color: rgb(
+            calc(128 - (128 - 34) * var(--scroll-blue)),  /* Червоний: від 255 до 34 */
+            calc(128 - (128 - 47) * var(--scroll-blue)),  /* Зелений: від 255 до 47 */
+            calc(128 - (128 - 51) * var(--scroll-blue))   /* Синій: від 255 до 51 */
+      );
       transition: background-color 0.1s linear;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-
-
-
 }
-// .scroll{
-//       background-color: $second-color;
-//       opacity: 0.98;
 
-// }
 
 //-MAIN
 
 //-MAIN-hero
+
 
 .hero {
       &__container {      
