@@ -70,20 +70,31 @@ body{
             display: flex;
             justify-content: space-between;
             column-gap: 20px;
+            align-items: center;
             @media (max-width: 380px) {
                   column-gap: 10px;
             }
       }
 
       &__logo {
+            padding-bottom: 6px;
             @media (max-width: 620px) {
-                  flex: 0 0 51px;
+                  flex: 0 1 38px;
                   overflow: hidden;
                   & img{
                         height: 100%;
                         max-height: 40px;
                   }
             }
+            @media (max-width: 480px) {
+                  flex: 0 0 38px;
+                  overflow: hidden;
+                  & img{
+                        height: 100%;
+                        max-height: 40px;
+                  }
+            }
+
             &:hover{
                   cursor: pointer;
             }
@@ -110,6 +121,12 @@ body{
             column-gap: 40px;
             row-gap: 8px;
             align-items: center;
+            @media (max-width: 668px) {
+                  column-gap: 15px;
+            }
+            @media (max-width: 480px) {
+                  column-gap: 60px;
+            }
             @media (max-width: 380px) {
                   column-gap: 10px;
             }
@@ -189,7 +206,7 @@ body{
             display: flex;
             align-items: center;
             position: relative;
-            @media (max-width: 620px) {
+            @media (max-width: 596px) {
                   flex-direction: column;
                   justify-content: center;
                   align-items: start;
@@ -199,9 +216,11 @@ body{
 
       
       &__titles {
+            padding-right: 7px;
             flex: 0 0 50%;
             z-index: 6;
             color: $first-color;
+            
       }
 
       &__sub-title {
@@ -211,13 +230,25 @@ body{
       }
 
       &__title {
+            @media (max-width: 770px) {
+                  font-size: rem(26);
+            }
+            @media (max-width: 640px) {
+                  font-size: rem(24);
+            }
+            @media (max-width: 460px) {
+                  font-size: rem(22);
+                  
+            }
+            @media (max-width: 360px) {
+                  font-size: rem(20);
+            }
       }
 
-      &__video {            
+      &__video {
             z-index: 7;
             flex: 0 0 50%;
             display: flex;
-
             @media (min-width: 620px) {
                   justify-content: center;
             }
@@ -244,13 +275,21 @@ body{
             }
             @media (min-width: 820px) {
                   padding: 32px 26px 32px 64px;
-                  
+            }
+            @media (max-width: 596px) {
+                  padding: 24px 24px 24px 66px;
+                  background-color: rgba(255, 255, 255, 0.2);
+                  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+                  transform: translateY(-0.3px);
+                  border-radius: 5px;
+                  transition: all 0.08s ease-in-out;
+            }
+            @media (max-width: 460px) {
+                  padding: 20px 20px 20px 56px;
             }
       }
 
       &__link {
-            &:hover{
-            }
             &::before{
                   content: url("../img/hero/BTN-Play.svg");
                   width: 32px;
@@ -262,6 +301,14 @@ body{
                   @media (min-width: 820px) {
                         top: 23px;
                         left: 22px;
+                  }
+                  @media (max-width: 596px) {
+                        top: 14px;
+                        left: 22px;
+                  }
+                  @media (max-width: 460px) {
+                        top: 12px;
+                        left: px;
                   }
             }
       }
@@ -279,6 +326,10 @@ body{
                   left: 0;
                   top: 0;
                   object-fit: cover;
+                  @media (max-width: 360px) {
+                        object-position: 45.5% center;
+                        
+                  }
             }
       }
 
@@ -449,6 +500,8 @@ body{
 
 //- Innovations
 
+
+
 .innovations {
       padding: 26px 0;
       position: relative;
@@ -486,6 +539,7 @@ body{
                   flex-direction: column-reverse;
             }
       }
+
 
       &__image {
             position: relative;
