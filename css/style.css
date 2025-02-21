@@ -121,6 +121,11 @@ body a {
   line-height: 26px;
   font-size: 14px;
 }
+@media (max-width: 720px) {
+  .text {
+    line-height: 22px;
+  }
+}
 
 .header {
   min-height: 105px;
@@ -426,6 +431,12 @@ body a {
   z-index: 5;
   align-items: flex-start;
 }
+@media (max-width: 610px) {
+  .materials__container {
+    flex-direction: column;
+    margin-bottom: -155px;
+  }
+}
 .materials__content {
   max-width: 400px;
   padding: 26px 0 55px 0;
@@ -433,6 +444,18 @@ body a {
   display: flex;
   flex-direction: column;
   gap: 13px;
+}
+@media (max-width: 720px) {
+  .materials__content {
+    padding: 0 0 35px 0;
+    flex: 0 0 58%;
+    position: relative;
+  }
+}
+@media (max-width: 610px) {
+  .materials__content {
+    max-width: 100%;
+  }
 }
 .materials__more {
   max-width: 92px;
@@ -455,14 +478,32 @@ body a {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   background-color: rgba(128, 128, 128, 0.2);
 }
+@media (max-width: 610px) {
+  .materials__more {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 210px;
+    left: 0;
+    max-width: 41%;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+}
 .materials::after {
   content: "";
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 160px;
+  height: 40%;
   background-color: #222f33;
   width: 42%;
+}
+@media (max-width: 720px) {
+  .materials::after {
+    width: 30%;
+    height: 50%;
+  }
 }
 .materials::before {
   content: "";
@@ -487,9 +528,26 @@ body a {
   opacity: var(--scroll-opacity-swiper);
   transition: background-color 0.001s linear;
 }
+@media (max-width: 610px) {
+  .swiper {
+    max-width: 50%;
+    bottom: 130px;
+    left: 110px;
+  }
+}
+@media (max-width: 565px) {
+  .swiper {
+    max-width: 50%;
+  }
+}
 .swiper__slide {
-  aspect-ratio: 300/420;
+  aspect-ratio: 5/7;
   position: relative;
+}
+@media (max-width: 610px) {
+  .swiper__slide {
+    aspect-ratio: 6/7;
+  }
 }
 .swiper__slide img {
   position: absolute;

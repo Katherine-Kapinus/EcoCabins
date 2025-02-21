@@ -17,7 +17,7 @@ body{
       min-height: 100%;
       overflow: hidden;
       display: flex;
-      flex-direction: column;
+      flex-direction: column;      
 }
 .page{
       flex: 1 1 auto;
@@ -56,6 +56,9 @@ body{
 .text{
       line-height: 26px;
       font-size: 14px;
+      @media (max-width: 720px) {
+            line-height: 22px;
+      }
 }
 
 //-HEADER
@@ -350,27 +353,33 @@ body{
 .materials {
       position: relative;
 
-
-
       &__container {
             display: flex;
             gap: 20px;
             position: relative;
             z-index: 5;
             align-items: flex-start;
-
-            
-
+            @media (max-width: 610px) {
+                  flex-direction: column;
+                  margin-bottom: -155px;
+            }
       }
 
       &__content {
             max-width: 400px;
-            // padding: 26px 0 300px 0;
             padding: 26px 0 55px 0;
             flex: 0 0 50%;
             display: flex;
             flex-direction: column;
             gap: 13px;
+            @media (max-width: 720px) {
+                  padding: 0 0 35px 0;
+                  flex: 0 0 58%;
+                  position: relative;
+            }
+            @media (max-width: 610px) {
+                  max-width: 100%;
+            }
 
       }
 
@@ -378,8 +387,8 @@ body{
       }
 
       &__text {
-            // line-height: 26px;
-            // font-size: 12px;
+            @media (max-width: 720px) {
+            }
       }
 
       &__more {
@@ -402,6 +411,16 @@ body{
                   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
                   background-color: rgba(128, 128, 128, 0.2);
             }
+            @media (max-width: 610px) {
+                  display: flex;
+                  justify-content: center;
+                  position: relative;
+                  top: 210px;
+                  left: 0;
+                  max-width: 41%;
+                  padding: 15px 0; 
+                  font-size: 14px;
+            }
       }
 
       &__slider {
@@ -412,9 +431,13 @@ body{
             position: absolute;
             bottom: 0;
             right: 0;
-            height: 160px;
+            height: 40%;
             background-color: $second-color;
             width: 42%;
+            @media (max-width: 720px) {
+                  width: 30%;
+                  height: 50%;
+            }
       }
       &::before{
             content: "";
@@ -434,21 +457,29 @@ body{
       max-width: 325px;
       justify-self: end;
       margin: 0;
-      // width: 100%;
       height: 100%;
       left: 0;
       bottom: 75px;
       opacity: var(--scroll-opacity-swiper);
       transition: background-color 0.001s linear;
+      @media (max-width: 610px) {
+            max-width: 50%;
+            bottom: 130px;
+            left: 110px;
+      }
+      @media (max-width: 565px) {
+            max-width: 50%;
+      }
 
       &__wrapper {
-
       }
 
       &__slide {
-            aspect-ratio: 300 / 420;
+            aspect-ratio: 5 / 7;
             position: relative;
-            
+            @media (max-width: 610px) {
+                  aspect-ratio: 6 / 7;
+            }
             & img{
                   position: absolute;
                   width: 100%;
@@ -627,8 +658,7 @@ body{
             font-family: "Rubik",sans-serif;
             font-weight: 400;
             line-height: 22px;
-            margin-bottom: 0;  // Прибираємо зайві відступи
-            
+            margin-bottom: 0; 
       }
 }
 
@@ -636,7 +666,6 @@ body{
 
 .footer {
       background-color: $second-color;
-      
 
       &__container {
             max-width: rem(1220);
