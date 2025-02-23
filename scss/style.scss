@@ -609,12 +609,19 @@ body{
             display: flex;
             flex-direction: row;
             gap: 60px;
-            padding-block: 85px;
+            padding-block: 45px;
             @media (max-width: 940px) {
                   gap: 40px;
             }
-            @media (max-width: 720px) {
-                  flex-direction: column-reverse;
+            @media (max-width: 640px) {
+                  gap: 30px;
+            }
+            @media (max-width: 500px) {
+                  gap: 15px;
+            }
+            @media (max-width: 450px) {
+                  flex-direction: column;
+                  padding-block: 30px;
             }
       }
 
@@ -627,11 +634,20 @@ body{
             @media (max-width: 850px) {
                   flex: 1 1 35%;
             }
-            @media (max-width: 720px) {
-                  max-width: 320px;
-                  align-self: center;
+            @media (max-width: 670px) {
+                  flex: 1 1 50%;
             }
-
+            @media (max-width: 550px) {
+                  flex: 1 1 35%;
+            }
+            @media (max-width: 450px) {
+                  max-width: 78%;
+                  align-self: center;
+                  margin-bottom: 10px;
+            }
+            @media (max-width: 360px) {
+                  max-width: 100%;
+            }
 
             &::before{
                   content: "";
@@ -667,13 +683,17 @@ body{
                   gap: 60px 30px;
                   flex: 1 1 65%;
             }
-            @media (max-width: 720px) {
-                  max-width: 720px;
+            @media (max-width: 730px) {
+                  max-width: 730px;
                   justify-content: space-between;
             }
-            @media (max-width: 630px) {
-                  max-width: 630px;
-                  gap: 30px 15px;
+            @media (max-width: 670px) {
+                  row-gap: 20px;
+                  flex: 1 1 50%;
+            }
+            @media (max-width: 550px) {
+                  row-gap: 15px;
+                  flex: 1 1 65%;
             }
 
       }
@@ -684,9 +704,18 @@ body{
             }
             @media (max-width: 720px) {
             }
-            @media (max-width: 630px) {
-                  max-width: 280px;
+            @media (max-width: 670px) {
+                  max-width: 100%;
             }
+            @media (max-width: 550px) {
+                  max-width: 90%;
+            }
+            @media (max-width: 500px) {
+                  max-width: 100%;
+            }
+            // @media (max-width: 630px) {
+            //       max-width: 280px;
+            // }
             
       }
 
@@ -696,6 +725,9 @@ body{
             font-family: "Merriweather",serif;
             font-weight: 900;
             margin-bottom: 8px;
+            @media (max-width: 670px) {
+                  margin-bottom: 5px;
+            }
       }
 
       &__text {
@@ -706,6 +738,9 @@ body{
             font-weight: 400;
             line-height: 22px;
             margin-bottom: 0; 
+            @media (max-width: 670px) {
+                  line-height: 16px;
+            }
       }
 }
 

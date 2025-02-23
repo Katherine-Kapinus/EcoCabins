@@ -686,16 +686,27 @@ body a {
   display: flex;
   flex-direction: row;
   gap: 60px;
-  padding-block: 85px;
+  padding-block: 45px;
 }
 @media (max-width: 940px) {
   .advantages__container {
     gap: 40px;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 640px) {
   .advantages__container {
-    flex-direction: column-reverse;
+    gap: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .advantages__container {
+    gap: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .advantages__container {
+    flex-direction: column;
+    padding-block: 30px;
   }
 }
 .advantages__image {
@@ -709,10 +720,26 @@ body a {
     flex: 1 1 35%;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 670px) {
   .advantages__image {
-    max-width: 320px;
+    flex: 1 1 50%;
+  }
+}
+@media (max-width: 550px) {
+  .advantages__image {
+    flex: 1 1 35%;
+  }
+}
+@media (max-width: 450px) {
+  .advantages__image {
+    max-width: 78%;
     align-self: center;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .advantages__image {
+    max-width: 100%;
   }
 }
 .advantages__image::before {
@@ -751,24 +778,40 @@ body a {
     flex: 1 1 65%;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 730px) {
   .advantages__features {
-    max-width: 720px;
+    max-width: 730px;
     justify-content: space-between;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 670px) {
   .advantages__features {
-    max-width: 630px;
-    gap: 30px 15px;
+    row-gap: 20px;
+    flex: 1 1 50%;
+  }
+}
+@media (max-width: 550px) {
+  .advantages__features {
+    row-gap: 15px;
+    flex: 1 1 65%;
   }
 }
 .advantages__feature {
   max-width: 180px;
 }
-@media (max-width: 630px) {
+@media (max-width: 670px) {
   .advantages__feature {
-    max-width: 280px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  .advantages__feature {
+    max-width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  .advantages__feature {
+    max-width: 100%;
   }
 }
 .advantages__title {
@@ -778,6 +821,11 @@ body a {
   font-weight: 900;
   margin-bottom: 8px;
 }
+@media (max-width: 670px) {
+  .advantages__title {
+    margin-bottom: 5px;
+  }
+}
 .advantages__text {
   color: #646d70;
   font-size: 14px;
@@ -786,6 +834,11 @@ body a {
   font-weight: 400;
   line-height: 22px;
   margin-bottom: 0;
+}
+@media (max-width: 670px) {
+  .advantages__text {
+    line-height: 16px;
+  }
 }
 
 .footer {
