@@ -421,9 +421,16 @@ body{
                   padding: 15px 0; 
                   font-size: 14px;
             }
+            @media (max-width:590px) {
+                  top: 195px;
+            }
+            @media (max-width:568px) {
+                  top: 185px;
+            }
       }
 
       &__slider {
+            
       }
 
       &::after{
@@ -452,6 +459,8 @@ body{
       }
 }
 
+
+
 .swiper {
       position: relative;
       max-width: 325px;
@@ -467,12 +476,18 @@ body{
             bottom: 130px;
             left: 110px;
       }
+      @media (max-width: 595px) {
+            max-width: 50%;
+            bottom: 110px;
+            left: 110px;
+      }
       @media (max-width: 565px) {
             max-width: 50%;
       }
 
       &__wrapper {
       }
+      
 
       &__slide {
             aspect-ratio: 5 / 7;
@@ -707,9 +722,3 @@ body{
             }
       }
 }
-
-
-
-
-
-

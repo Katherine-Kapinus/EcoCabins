@@ -490,6 +490,16 @@ body a {
     font-size: 14px;
   }
 }
+@media (max-width: 590px) {
+  .materials__more {
+    top: 195px;
+  }
+}
+@media (max-width: 568px) {
+  .materials__more {
+    top: 185px;
+  }
+}
 .materials::after {
   content: "";
   position: absolute;
@@ -532,6 +542,13 @@ body a {
   .swiper {
     max-width: 50%;
     bottom: 130px;
+    left: 110px;
+  }
+}
+@media (max-width: 595px) {
+  .swiper {
+    max-width: 50%;
+    bottom: 110px;
     left: 110px;
   }
 }

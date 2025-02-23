@@ -60,3 +60,5 @@ window.addEventListener('scroll', function () {
     document.documentElement.style.setProperty('--scroll-opacity-swiper', percentage);
 });
 
+
+
