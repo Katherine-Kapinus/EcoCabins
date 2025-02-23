@@ -754,12 +754,22 @@ body{
             display: flex;
             padding-block: 40px;
             justify-content: space-between;
+            align-items: center;
+            @media (max-width: 520px) {
+                  flex-direction: column;
+                  padding-block: 30px;
+                  gap: 20px;
+            }
       }
 
       &__mail {
+            padding-top: 5px;
             &:hover{
                   cursor: pointer;
                   text-decoration: underline;
+            }
+            @media (max-width: 520px) {
+                  order: 3;
             }
       }
 
@@ -767,11 +777,29 @@ body{
             &:hover{
                   cursor: pointer;
             }
+            @media (max-width: 560px) {
+            display: flex;
+            justify-content: center;
+                  & img{
+                        max-width: 80%;
+                  }
+            }
+            @media (max-width: 520px) {
+                  order: 1;
+            }
       }
 
       &__legal {
             display: flex;
             gap: 15%;
+            padding-top: 5px;
+            @media (max-width: 580px) {
+                  gap: 8%;
+            }
+            @media (max-width: 520px) {
+                  order: 2;
+                  padding-left: 20px;
+            }
       }
 
       &__cookies {
@@ -781,6 +809,7 @@ body{
             }
       }
 
+      
       &__privacy-policy {
             margin-right: 30px;
             &:hover{
