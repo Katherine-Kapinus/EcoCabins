@@ -67,13 +67,29 @@ body{
       padding-top: 35px;
       position: fixed;
       width: 100%;
-      z-index: 5;
+      z-index: 10;
 
+      &.scroll{
+            background-color: rgba(128, 128, 128, var(--scroll-opacity-grey-before)); /* Від прозорого до сірого */
+            transition: background-color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      &.blue{
+            background-color: rgb(
+                  calc(128 - (128 - 34) * var(--scroll-blue)),  /* Червоний: від 255 до 34 */
+                  calc(128 - (128 - 47) * var(--scroll-blue)),  /* Зелений: від 255 до 47 */
+                  calc(128 - (128 - 51) * var(--scroll-blue))   /* Синій: від 255 до 51 */
+            );
+            transition: background-color 0.1s linear;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
       &__container {
             display: flex;
             justify-content: space-between;
             column-gap: 20px;
             align-items: center;
+
             @media (max-width: 380px) {
                   column-gap: 10px;
             }
@@ -89,13 +105,11 @@ body{
                         max-height: 40px;
                   }
             }
-            @media (max-width: 480px) {
-                  flex: 0 0 38px;
-                  overflow: hidden;
-                  & img{
-                        height: 100%;
-                        max-height: 40px;
-                  }
+            @media (max-width:620px) {
+                  position: relative;
+                  z-index: 6;
+                  flex: 0 1 54px;
+                  height: 80px;
             }
 
             &:hover{
@@ -103,17 +117,75 @@ body{
             }
       }
 
-      &__body {
-            display: flex;
-            column-gap: 42px;
-            @media (max-width: 620px) {
-                  column-gap: 20px;
-            }
-            @media (max-width: 380px) {
-                  column-gap: 10px;
+      &__burger{
+            @media (max-width:620px) {
+                  display: block;
+                  position: relative;
+                  width: 55px;
+                  height: 40px;
+                  z-index: 8;
+                  top: -18px;
+                  &::before, &::after{
+                        content: '';
+                        width: 100%;
+                        height: 4px;
+                        background-color: #fff;
+                        position: absolute;
+                        transition: all 0.3s ease 0s;
+                  }
+
+                  &::before{
+                        top: 0;
+                  }
+
+                  & span{
+                        content: '';
+                        width: 100%;
+                        height: 4px;
+                        top: 19px;
+                        background-color: #fff;
+                        position: absolute;
+                  }
+                  &::after{
+                        bottom: 0;
+                  }
+
+                  &.active {
+                        &::before {
+                              transform: rotate(45deg);
+                              top: 10px;
+                        }
+                        & span{
+                              transform: scale(0);
+                        }
+                        &::after {
+                              transform: rotate(-45deg);
+                              top: 10px;
+                        }
+                  }
             }
       }
 
+      &__body {            
+            position: relative;
+            z-index: 5;
+            display: flex;
+            column-gap: 42px;
+            @media (max-width:620px) {
+                  position: fixed;
+                  flex-direction: column;
+                  top: -100%;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-color: #8a8f91;
+                  transition: all 0.5s ease 0s;
+                  &.active{
+                        top: 0;
+                  }
+            }
+      }
+//-------------------------------------------
       &__menu {
       }
 
@@ -127,11 +199,15 @@ body{
             @media (max-width: 668px) {
                   column-gap: 15px;
             }
-            @media (max-width: 480px) {
-                  column-gap: 60px;
-            }
-            @media (max-width: 380px) {
-                  column-gap: 10px;
+            @media (max-width: 620px) {
+                  flex-direction: column;
+                  align-items: normal;
+                  position: relative;
+                  top: 140px;
+                  left: 0;
+                  align-content: center;
+                  row-gap: 24px;
+                  text-align: center;
             }
 
       }
@@ -140,7 +216,7 @@ body{
             color: $first-color;
             font-size: rem(16);
             @media (max-width: 620px) {
-                  font-size: 16px;
+                  font-size: 28px;
             }
       }
 
@@ -172,28 +248,16 @@ body{
                   background-color: rgba(128, 128, 128, 0.5);
             }
             @media (max-width: 620px) {
+                  width: 94%;
+                  align-self: center;
+                  position: relative;
+                  top: 200px;
+                  left: 0;
+                  padding: 15px 0;
+                  font-size: 20px;
 
-            }
-            @media (max-width: 380px) {
-                  padding: 13px 18px;
             }
       }
-}
-
-.scroll{
-      background-color: rgba(128, 128, 128, var(--scroll-opacity-grey-before)); /* Від прозорого до сірого */
-      transition: background-color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
-      
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-.blue{
-      background-color: rgb(
-            calc(128 - (128 - 34) * var(--scroll-blue)),  /* Червоний: від 255 до 34 */
-            calc(128 - (128 - 47) * var(--scroll-blue)),  /* Зелений: від 255 до 47 */
-            calc(128 - (128 - 51) * var(--scroll-blue))   /* Синій: від 255 до 51 */
-      );
-      transition: background-color 0.1s linear;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -816,6 +880,6 @@ body{
                   cursor: pointer;
                   text-decoration: underline;
             }
-      }
-
+      }     
 }
+

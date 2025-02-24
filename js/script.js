@@ -61,4 +61,8 @@ window.addEventListener('scroll', function () {
 });
 
 
-
+window.addEventListener('click', function(){
+    document.querySelector('.header__burger').classList.toggle('active');
+    document.querySelector('.header__body').classList.toggle('active');
+    document.querySelector('body').classList.toggle('lock');
+});
