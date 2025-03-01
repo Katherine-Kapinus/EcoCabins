@@ -108,8 +108,12 @@ body{
             @media (max-width:620px) {
                   position: relative;
                   z-index: 6;
-                  flex: 0 1 54px;
-                  height: 80px;
+                  flex: 0 1 auto;
+                  height: 40px;
+            }
+            @media (max-width: 425px){
+                  flex: 0 1 42px;
+                  height: 38px;
             }
 
             &:hover{
@@ -121,14 +125,13 @@ body{
             @media (max-width:620px) {
                   display: block;
                   position: relative;
-                  width: 55px;
-                  height: 40px;
+                  width: 46px;
+                  height: 34px;
                   z-index: 8;
-                  top: -18px;
                   &::before, &::after{
                         content: '';
                         width: 100%;
-                        height: 4px;
+                        height: 3px;
                         background-color: #fff;
                         position: absolute;
                         transition: all 0.3s ease 0s;
@@ -141,8 +144,8 @@ body{
                   & span{
                         content: '';
                         width: 100%;
-                        height: 4px;
-                        top: 19px;
+                        height: 3px;
+                        top: 16px;
                         background-color: #fff;
                         position: absolute;
                   }
@@ -162,6 +165,17 @@ body{
                               transform: rotate(-45deg);
                               top: 10px;
                         }
+                  }
+            }
+            @media (max-width: 425px) {
+                  width: 40px;
+                  height: 29px;
+                  &::before, &::after{
+                        height: 3px;
+                  }
+                  & span{
+                        content: '';
+                        top: 13.5px;
                   }
             }
       }
@@ -196,7 +210,7 @@ body{
             column-gap: 40px;
             row-gap: 8px;
             align-items: center;
-            @media (max-width: 668px) {
+            @media (max-width: 690px) {
                   column-gap: 15px;
             }
             @media (max-width: 620px) {
@@ -873,7 +887,6 @@ body{
             }
       }
 
-      
       &__privacy-policy {
             margin-right: 30px;
             &:hover{
