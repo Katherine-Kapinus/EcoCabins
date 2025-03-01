@@ -68,6 +68,10 @@ body{
       position: fixed;
       width: 100%;
       z-index: 10;
+      @media (max-width: 425px) {
+            min-height: 70px;
+            padding-top: 20px;
+      }
 
       &.scroll{
             background-color: rgba(128, 128, 128, var(--scroll-opacity-grey-before)); /* Від прозорого до сірого */
@@ -217,7 +221,7 @@ body{
                   flex-direction: column;
                   align-items: normal;
                   position: relative;
-                  top: 140px;
+                  top: 200px;
                   left: 0;
                   align-content: center;
                   row-gap: 24px;
@@ -230,7 +234,7 @@ body{
             color: $first-color;
             font-size: rem(16);
             @media (max-width: 620px) {
-                  font-size: 28px;
+                  font-size: 26px;
             }
       }
 
@@ -265,11 +269,10 @@ body{
                   width: 94%;
                   align-self: center;
                   position: relative;
-                  top: 200px;
+                  top: 230px;
                   left: 0;
                   padding: 15px 0;
                   font-size: 20px;
-
             }
       }
 }
@@ -838,6 +841,10 @@ body{
                   padding-block: 30px;
                   gap: 20px;
             }
+            @media (max-width: 425px) {
+                  padding-block: 12px;
+                  gap: 8px;
+            }
       }
 
       &__mail {
@@ -895,4 +902,5 @@ body{
             }
       }     
 }
+
 
