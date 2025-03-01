@@ -1,5 +1,5 @@
 const swiper = new Swiper('.materials__slider', {
-    loop: true,
+    // loop: true,
 
     // If we need pagination
     pagination: {
