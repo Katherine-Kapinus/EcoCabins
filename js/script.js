@@ -1,12 +1,12 @@
 const swiper = new Swiper('.materials__slider', {
     loop: true,
-
-    // If we need pagination
+    slidesPerView: 1, // або більше, залежно від потреб
+    slidesPerGroup: 1,
+    loopFillGroupWithBlank: true, // Додасть пусті місця для коректної роботи loop
     pagination: {
         el: '.swiper-pagination',
-        clickable: true, // Для можливості натискання
+        clickable: true, 
     },
-
 });
 
 window.addEventListener('scroll', function () {    
