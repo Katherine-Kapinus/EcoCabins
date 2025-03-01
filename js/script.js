@@ -1,11 +1,10 @@
 const swiper = new Swiper('.materials__slider', {
     loop: true,
-    slidesPerView: 1, // або більше, залежно від потреб
-    slidesPerGroup: 1,
-    loopFillGroupWithBlank: true, // Додасть пусті місця для коректної роботи loop
+
+    // If we need pagination
     pagination: {
         el: '.swiper-pagination',
-        clickable: true, 
+        clickable: true, // Для можливості натискання
     },
 });
 
