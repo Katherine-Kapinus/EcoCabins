@@ -46,20 +46,20 @@ window.addEventListener('scroll', function () {
 
 
 function updateOpacity() {    
-    let windowHeight = window.innerHeight; 
-    let maxScroll = windowHeight * 0.008; 
+    let windowHeight = window.innerHeight || document.documentElement.clientHeight;  
+    let maxScroll = Math.max(windowHeight * 0.008, 1); // мінімальне значення 1, щоб уникнути ділення на 0
 
-    let scrollTop = window.scrollY; 
+    let scrollTop = window.scrollY || document.documentElement.scrollTop; 
     let percentage = Math.min(scrollTop / maxScroll, 1); 
 
     document.documentElement.style.setProperty('--scroll-opacity-swiper', percentage);
 }
 
-// Викликаємо функцію одразу при завантаженні сторінки
-updateOpacity(); 
+document.addEventListener('DOMContentLoaded', function () {
+    updateOpacity();
+    window.addEventListener('scroll', updateOpacity);
+});
 
-// Додаємо слухач подій для скролу
-window.addEventListener('scroll', updateOpacity);
 
 
 document.querySelector('.header__burger').addEventListener('click', function() {
