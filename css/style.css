@@ -458,7 +458,7 @@ body a {
 @media (max-width: 460px) {
   .hero__link::before {
     top: 12px;
-    left: px;
+    left: 15px;
   }
 }
 .hero__image {
