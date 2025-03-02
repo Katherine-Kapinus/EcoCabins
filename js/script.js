@@ -55,10 +55,13 @@ function updateOpacity() {
     document.documentElement.style.setProperty('--scroll-opacity-swiper', percentage);
 }
 
+document.documentElement.style.setProperty('--scroll-opacity-swiper', 0); // Одразу встановлюємо 0
+
 document.addEventListener('DOMContentLoaded', function () {
-    updateOpacity();
+    updateOpacity(); 
     window.addEventListener('scroll', updateOpacity);
 });
+
 
 
 

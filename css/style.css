@@ -631,8 +631,13 @@ body a {
   height: 400px;
   left: 0;
   bottom: 75px;
-  opacity: var(--scroll-opacity-swiper);
-  transition: background-color 0.001s linear;
+  opacity: 0; /* Початково прихований */
+}
+@media (min-width: 611px) {
+  .swiper {
+    opacity: var(--scroll-opacity-swiper);
+    transition: background-color 0.001s linear;
+  }
 }
 @media (max-width: 610px) {
   .swiper {
