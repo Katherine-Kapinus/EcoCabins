@@ -59,9 +59,9 @@ window.addEventListener('scroll', function () {
     document.documentElement.style.setProperty('--scroll-opacity-swiper', percentage);
 });
 
-
-window.addEventListener('click', function(){
-    document.querySelector('.header__burger').classList.toggle('active');
-    document.querySelector('.header__body').classList.toggle('active');
-    document.querySelector('body').classList.toggle('lock');
+document.querySelector('.header__burger').addEventListener('click', function() {
+    this.classList.toggle('active'); // Додаємо/знімаємо клас .active у бургер-меню
+    document.querySelector('.header__body').classList.toggle('active'); // Аналогічно для меню
+    document.body.classList.toggle('active'); // Додаємо/знімаємо клас .active у body
+    document.body.classList.toggle('lock'); // Додаємо/знімаємо клас .lock у body
 });
