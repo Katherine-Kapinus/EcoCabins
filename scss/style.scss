@@ -74,18 +74,18 @@ body{
       }
 
       &.scroll{
-            background-color: rgba(128, 128, 128, var(--scroll-opacity-grey-before)); /* Від прозорого до сірого */
-            transition: background-color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+            background-color: rgba(128, 128, 128, var(--scroll-opacity-header-before)); /* Від прозорого до сірого */
+            transition: background-color 0.1s ease-in-out, box-shadow 0.001s ease-in-out;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       }
 
       &.blue{
             background-color: rgb(
-                  calc(128 - (128 - 34) * var(--scroll-blue)),  /* Червоний: від 255 до 34 */
-                  calc(128 - (128 - 47) * var(--scroll-blue)),  /* Зелений: від 255 до 47 */
-                  calc(128 - (128 - 51) * var(--scroll-blue))   /* Синій: від 255 до 51 */
+                  calc(128 - (128 - 34) * var(--scroll-header-blue)),  /* Червоний: від 255 до 34 */
+                  calc(128 - (128 - 47) * var(--scroll-header-blue)),  /* Зелений: від 255 до 47 */
+                  calc(128 - (128 - 51) * var(--scroll-header-blue))   /* Синій: від 255 до 51 */
             );
-            transition: background-color 0.1s linear;
+            transition: background-color 3s ease-in-out;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       }
       &__container {
@@ -378,7 +378,7 @@ body{
 
       &__link {
             &::before{
-                  content: url("../img/hero/BTN-Play.svg");
+                  content: url("../img/hero/play.webp");
                   width: 32px;
                   height: 32px;
                   flex: 0 0 32px;
@@ -475,9 +475,6 @@ body{
 
       }
 
-      &__title {
-      }
-
       &__text {
             @media (max-width: 720px) {
             }
@@ -526,10 +523,6 @@ body{
             }
       }
 
-      &__slider {
-            
-      }
-
       &::after{
             content: "";
             position: absolute;
@@ -555,7 +548,7 @@ body{
             width: 70%;
             z-index: 1;
             background-color: rgba(255, 255, 255, var(--scroll-opacity-before)); /* Від прозорого до сірого */
-            transition: background-color 0.1s linear;
+            transition: background-color 0.01s ease-in-out;
       }
 }
 
@@ -570,10 +563,12 @@ body{
       left: 0;
       bottom: 75px;
       opacity: 0; /* Початково прихований */
-      @media (min-width:611px) {
-            opacity: var(--scroll-opacity-swiper);
-            transition: background-color 0.001s linear;
+      transition: opacity 0.01s cubic-bezier(0.6, 0, 0.2, 1);
+
+      @media (min-width: 611px) {
+            opacity: var(--scroll-opacity-swiper); /* Динамічне значення */
       }
+
       @media (max-width: 610px) {
             max-width: 50%;
             bottom: 130px;
