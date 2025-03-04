@@ -633,12 +633,10 @@ body a {
   left: 0;
   bottom: 75px;
   opacity: 0; /* Початково прихований */
-  transition: opacity 0.01s cubic-bezier(0.6, 0, 0.2, 1);
+  transition: opacity 0.3s ease-in-out; /* Плавний перехід */
 }
-@media (min-width: 611px) {
-  .swiper {
-    opacity: var(--scroll-opacity-swiper); /* Динамічне значення */
-  }
+.swiper.visible {
+  opacity: 1; /* Повна видимість при скролінгу */
 }
 @media (max-width: 610px) {
   .swiper {

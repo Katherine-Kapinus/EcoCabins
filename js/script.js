@@ -54,16 +54,32 @@ window.addEventListener('scroll', function () {
 });
 
 //- opasity-swiper
-document.documentElement.style.setProperty('--scroll-opacity-swiper', 0); // Гарантуємо, що спочатку буде 0
+document.documentElement.style.setProperty('--scroll-opacity-swiper', 0); // Початково встановлюємо 0
 
-function updateOpacity() {    
-    let windowHeight = window.innerHeight || document.documentElement.clientHeight;  
-    let maxScroll = Math.max(windowHeight * 0.2, 1);  // Прозорість змінюється після прокручування на 100-200 пікселів
-    let scrollTop = window.scrollY || document.documentElement.scrollTop; 
-    let percentage = Math.min(scrollTop / maxScroll, 1); 
+function updateOpacity() {
+    let windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    let maxScroll = Math.max(windowHeight * 0.2, 1); // Прозорість змінюється після прокручування на 100-200 пікселів
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+    let percentage = Math.min(scrollTop / maxScroll, 1);
 
+    // Змінюємо значення змінної CSS
     document.documentElement.style.setProperty('--scroll-opacity-swiper', percentage);
+
+    // Додаємо клас, коли відстань прокручування більше 0
+    if (percentage > 0) {
+        document.querySelector('.swiper').classList.add('visible');
+    } else {
+        document.querySelector('.swiper').classList.remove('visible');
+    }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Затримка для ініціалізації прозорості
+    setTimeout(function () {
+        updateOpacity(); // Викликаємо функцію для ініціалізації після завантаження
+        window.addEventListener('scroll', updateOpacity); // Слухаємо подію скролу
+    }, 10); // Затримка в 10 мілісекунд, щоб уникнути блимаючого ефекту
+});
 
 //- Викликаємо updateOpacity перед повним завантаженням
 updateOpacity();
