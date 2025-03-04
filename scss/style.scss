@@ -22,14 +22,6 @@ body{
 .page{
       flex: 1 1 auto;
       z-index: 4;
-      &__hero{
-      }
-      &__materials {
-      }
-      &__innovations {
-      }
-      &__advantages {
-      }
 }
 
 
@@ -75,7 +67,7 @@ body{
 
       &.scroll{
             background-color: rgba(128, 128, 128, var(--scroll-opacity-header-before)); /* Від прозорого до сірого */
-            transition: background-color 0.1s ease-in-out, box-shadow 0.001s ease-in-out;
+            transition: background-color 0.01s ease-in-out, box-shadow 0.001s ease-in-out;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       }
 
@@ -204,8 +196,6 @@ body{
             }
       }
 //-------------------------------------------
-      &__menu {
-      }
 
       &__list {
             height: 100%;
@@ -591,9 +581,6 @@ body{
             max-width: 99%;
       }
 
-      &__wrapper {
-      }
-      
 
       &__slide {
             aspect-ratio: 5 / 7;

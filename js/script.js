@@ -1,5 +1,3 @@
-
-
 const swiper = new Swiper('.materials__slider', {
     // loop: true,
 
